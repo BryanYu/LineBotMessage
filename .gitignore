@@ -396,7 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/EFCoreSample/.idea/.idea.EFCoreSample/.idea/.gitignore
-/EFCoreSample/.idea/.idea.EFCoreSample/.idea/encodings.xml
-/EFCoreSample/.idea/.idea.EFCoreSample/.idea/indexLayout.xml
-/EFCoreSample/.idea/.idea.EFCoreSample/.idea/vcs.xml
+/LineBotMessage/.idea/.idea.LineBotMessage/.idea/.gitignore
+/LineBotMessage/.idea/.idea.LineBotMessage/.idea/encodings.xml
+/LineBotMessage/.idea/.idea.LineBotMessage/.idea/indexLayout.xml
+/LineBotMessage/.idea/.idea.LineBotMessage/.idea/vcs.xml
+/LineBotMessage/.idea
