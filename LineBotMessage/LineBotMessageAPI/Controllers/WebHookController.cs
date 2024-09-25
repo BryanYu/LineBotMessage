@@ -1,4 +1,5 @@
-﻿using LineBotMessageAPI.Models.Request;
+﻿using LineBotMessageAPI.ActionFilter;
+using LineBotMessageAPI.Models.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LineBotMessageAPI;
@@ -9,13 +10,15 @@ public class WebHookController : ControllerBase
 {
     private readonly IConfiguration _configuration;
 
+    
     public WebHookController(IConfiguration configuration)
     {
         _configuration = configuration;
     }
 
     [HttpPost("receiveEvent")]
-    public IActionResult ReceiveEvent([FromBody] ReceiveEventRequest request, [FromHeader(Name = "x-line-signature")] string signature)
+    [ServiceFilter<ValidateSignature>]
+    public IActionResult ReceiveEvent([FromBody] ReceiveEventRequest request)
     {
         return Ok();
     }
